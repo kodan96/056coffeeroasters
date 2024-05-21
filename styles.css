@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root {
+    --dark-cyan: #0E8784;
+    --dark-grey-blue: #333D4B;
+    --pale-orange: #FDD6BA;
+    --light-cream: #FEFCF7;
+    --grey: #83888F;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-cream);
+    font-family: 'Barlow';
+    text-align: center;
+    counter-reset: section;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Fraunces';
+    font-weight: 900;
+    color: var(--light-cream);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+h2, h3 {
+    font-family: 'Fraunces';
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--dark-grey-blue);
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.56rem;
+    color: var(--dark-grey-blue);
+    font-size: .93rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-cream);
+    font-family: 'Fraunces';
+    font-weight: 900;
+    display: inline-block;
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+    background-color: var(--dark-cyan);
+    border-radius: 6px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+
+/* Layout */
+img {
+    max-inline-size: 100%;
+}
+
+.container {
+    padding-inline: 1.5rem;
+}
+.logo {
+    height: 18px;
+    margin-block: 2rem;
+}
+
+header {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    position: absolute;
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+.hero {
+    padding: 6.25rem 1.5rem;
+    background-image: url(home/mobile/image-hero-coffeepress.jpg);
+    background-size: 100%;
+    background-color: purple;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 7.5rem;
+}
+
+.hero p {
+    color: var(--light-cream);
+    margin-bottom: 2.5rem;
+}
+.collections {
+    margin-bottom: 7.5rem;
+}
+
+.collections_header h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(to bottom, var(--grey), var(--light-cream));
+    background-clip: text;
+    color: transparent;
+    line-height: 1.75;
+    margin-bottom: .75rem;
+}
+
+.collection_item--image {
+    padding-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.collection_item--text {
+    padding-inline: 2rem;
+    margin-bottom: 3rem;
+}
+
+.collection_item--image img {
+    width: 60%;
+}
+
+.reasons {
+    
+    border-radius: 10px;
+    margin-bottom: 7.5rem;
+    
+}
+
+.reasons_header {
+    
+    color: var(--light-cream);
+    padding: 4rem 1.5rem 0;
+    margin-bottom: 4rem;
+    background-color: #2C343E;
+    margin-bottom: -38rem;
+    padding-bottom: 43rem;
+    border-radius: 10px;
+
+    p {
+        color: var(--light-cream);
+    }
+}
+
+.reasons h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.reasons_container {
+    padding-inline: 1.5rem;
+}
+
+.reasons_item {
+    color: var(--light-cream);
+    background-color: var(--dark-cyan);
+    padding: 4.5rem 1.5rem 3.18rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+
+}
+
+.reasons h3 {
+    margin-bottom: 1.5rem;
+}
+
+
+.reasons_item p {
+    padding-inline: 1rem;
+    
+}
+
+.reasons h3,
+.reasons_item p {
+    color: var(--light-cream);
+}
+
+.reasons_item--image {
+    margin-bottom: 3.5rem;
+}
+
+.process h2{
+    color: var(--grey);
+    margin-bottom: 5rem;
+}
+
+.process h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+   
+}
+
+.process h3::before {
+    content: counter(section, decimal-leading-zero);
+    counter-increment: section;
+    display: block;
+    font-size: 4.5rem;
+    color: var(--pale-orange);
+    line-height: 1;
+    margin-block: 3.5rem 1.5rem;
+}
+
+.process:last-child .process_section {
+    margin-bottom: 5rem;
+}
+
+.process {
+    margin-bottom: 7.5rem;
+
+    p {
+        text-wrap: pretty;
+    }
+}
+
+
+footer {
+    background-color: var(--dark-grey-blue);
+    padding-bottom: 3.5rem;
+    margin-bottom: 4.5rem;
+}
+
+footer .logo {
+    height: 24px;
+    margin-block: 3.5rem 3rem;
+    
+}
+
+footer a {
+    font-weight: 700;
+    font-family: 'Barlow';
+    text-transform: uppercase;
+    font-size: .75rem;
+    background-color: transparent;
+    color: var(--grey);
+    padding: 0;
+    
+}
+
+footer ul li:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.footer_socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+
+
+
+

@@ -30,7 +30,7 @@ $(document).ready(() => {
 
     const navClassToggle = () => {
         const headerNavBtns = document.querySelector('header').querySelectorAll('a')
-        if(window.innerWidth > 680) {
+        if(window.innerWidth >= 680) {
             headerNavBtns.forEach(btn => {
                 btn.classList.add('footer_nav--btn');
             })

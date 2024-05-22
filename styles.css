@@ -78,6 +78,8 @@ img {
 
 .container {
     padding-inline: 1.5rem;
+    max-width: 1700px;
+    margin-inline: auto;
 }
 .logo {
     height: 18px;
@@ -334,6 +336,12 @@ a:hover {
     opacity: 0;
 }
 
+.open:hover,
+.close:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
 
 
 @media screen and (min-width: 680px) {
@@ -373,6 +381,8 @@ a:hover {
 
     .logo {
         height: 26px;
+        margin-block: 2rem 3.2rem;
+
     }
 
     header li:not(:last-child) {

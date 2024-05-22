@@ -9,6 +9,8 @@
     font-size: 16px;
 }
 
+/*-------------------------------------- Typography */
+
 * {
     margin: 0;
     padding: 0;
@@ -68,7 +70,7 @@ ul {
 
 
 
-/* Layout */
+/* -------------------------------------------Layout */
 img {
     max-inline-size: 100%;
 }
@@ -81,16 +83,36 @@ img {
     margin-block: 2rem;
 }
 
-header {
-    
+header {   
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
+    position: relative;
 }
 
 nav {
     position: absolute;
-    display: none;
+    height: 100vh;
+    width: 100vw;
+    left: 50%;
+    top: 4rem;
+    transform: translateX(-50%);
+    padding-top: 4.125rem;
+    background: linear-gradient(to bottom, var(--light-cream) 40%, #FEFCF770);
+    z-index: 30;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in;
+}
+
+nav a {
+    padding: 0;
+    background-color: transparent;
+    color: var(--dark-grey-blue);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+
 }
 
 .close {
@@ -101,7 +123,6 @@ nav {
     padding: 6.25rem 1.5rem;
     background-image: url(home/mobile/image-hero-coffeepress.jpg);
     background-size: 100%;
-    background-color: purple;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 10px;
@@ -118,7 +139,7 @@ nav {
 
 .collections_header h2 {
     font-size: 2.5rem;
-    background: linear-gradient(to bottom, var(--grey), var(--light-cream));
+    background: linear-gradient(to bottom, var(--grey) 1%, var(--light-cream) 70%);
     background-clip: text;
     color: transparent;
     line-height: 1.75;
@@ -244,7 +265,7 @@ footer .logo {
     
 }
 
-footer a {
+.footer_nav--btn {
     font-weight: 700;
     font-family: 'Barlow';
     text-transform: uppercase;
@@ -265,6 +286,214 @@ footer ul li:not(:last-child) {
     justify-content: center;
     gap: 1.5rem;
     margin-top: 3rem;
+}
+
+
+@media screen and (min-width: 680px) {
+    
+    h1 {
+        font-size: 3rem;
+    }
+
+    .container {
+        padding-inline: 2.5rem;
+    }
+
+
+    .header_menu-toggles {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        height: auto;
+        width: fit-content;
+        transform: none;
+        padding-top: 0;
+        background: none; 
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav li {
+        display: inline-block;
+    }
+
+    nav a {
+        margin-bottom: 0;
+        display: inline-block;
+    }
+
+    .logo {
+        height: 26px;
+    }
+
+    header li:not(:last-child) {
+        margin-right: 2rem;
+    }
+
+    .hero {
+        text-align: left;
+        padding: 6.25rem 3.625rem;
+        background-image: url(home/tablet/image-hero-coffeepress.jpg);
+        background-size: cover;
+
+    }
+
+    .hero * {
+        max-width: 65%;
+    }
+
+    .collections {
+        position: relative;
+        padding-top: 6rem;
+    }
+
+    
+
+    .collections_header h2 {
+        font-size: 7rem;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-wrap: nowrap;
+        z-index: -10;
+    }
+
+    .collections_item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: .5rem;
+        
+    }
+
+    .collections_item--image {
+        width: 50%;
+    }
+
+    .collection_item--image img{
+       width: 60%;
+       z-index: 10;
+    }
+
+    .collection_item--text * {
+        text-align: left;
+        max-width: 40ch;
+    }
+
+    .collection_item--text h3 {
+        margin-bottom: 1em;
+    }
+
+    .reasons_header {
+        padding-inline: 6.5rem;
+        margin-bottom: -19rem;
+        padding-bottom: 23.3rem;
+    }
+
+    .reasons_container {
+        padding-inline: 3.5rem;
+    }
+
+    .reasons h2 {
+        font-size: 2rem;
+    }
+
+    .reasons_item {
+        display: flex;
+        align-items: center;
+        padding: 2.5rem 3rem;
+        padding-inline-start: 4.4rem;
+        gap: 3.5rem;
+    }
+
+    .reasons_item--image {
+        margin-bottom: 0;
+        img {
+            transform: scale(1.2);
+        }
+    }
+
+    .reasons_item--text {
+        text-align: left;
+
+        p {
+            padding: 0;
+        }
+    }
+
+
+    .process {
+        text-align: left;
+        margin-bottom: 9rem;
+    }
+
+    .process_container {
+        display: flex;
+        position: relative;
+    }
+
+    .process_section{
+        padding-right: 2.5rem;
+        margin-bottom: 2rem;
+        h3 {
+        max-width: 10ch;
+        }
+    }
+
+    .inner-circle {
+        content: "";
+        position: absolute;
+        top: -16px;
+        left: 0;
+        height: 2rem;
+        width: 2rem;
+        border: 2px solid var(--dark-cyan);
+        border-radius: 50%;
+        background-color: var(--light-cream);
+
+        z-index: 10;
+    }
+
+    .inner-circle.two {
+        left: 50%;
+        transform: translateX(50%);
+    }
+    .inner-circle.three {
+        left: 100%;
+        
+    }
+
+    .line {
+        position: absolute;
+        width: calc(66% + 16px);
+        height: 2px;
+        background-color: var(--pale-orange);
+    }
+
+
+    .process:last-child .process_section {
+        margin-bottom: 2rem;
+    }
+
+    .footer_nav li {
+        display: inline;
+        
+    }
+
+    footer .logo {
+        height: 26px;
+    }
+
+    .footer_nav li:not(:last-child) {
+        margin-right: 2rem;
+    }
+
+
+
+    
 }
 
 

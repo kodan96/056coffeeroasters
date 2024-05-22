@@ -109,17 +109,20 @@
             </section>
             <section class="process">
                 <h2>How it works</h2>
-                <div class="process_section">
-                    <h3>Pick your coffee</h3>
-                    <p>Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.</p>
-                </div>
-                <div class="process_section">
-                    <h3>Choose the frequency</h3>
-                    <p>Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.</p>
-                </div>
-                <div class="process_section">
-                    <h3>Receive and enjoy!</h3>
-                    <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.</p>
+                <div class="process_container">
+                    <div class="line"><div class="inner-circle one"></div><div class="inner-circle two"></div><div class="inner-circle three"></div></div>
+                    <div class="process_section">
+                        <h3>Pick your coffee</h3>
+                        <p>Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.</p>
+                    </div>
+                    <div class="process_section">
+                        <h3>Choose the frequency</h3>
+                        <p>Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.</p>
+                    </div>
+                    <div class="process_section">
+                        <h3>Receive and enjoy!</h3>
+                        <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.</p>
+                    </div>
                 </div>
                 <div class="process_cta">
                     <a href="subscribe.html">Create your plan</a>
@@ -130,13 +133,13 @@
             <div class="footer_logo">
                 <img src="shared/desktop/logo-copy.svg" alt="Cofferoasters Logo" loading="lazy" class="logo">
             </div>
-            <div class="footer_nav" role="navigation"></div>
+            <div class="footer_nav" role="navigation">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="subscribe.html">Create Your Plan</a></li>
+                    <li><a href="index.html" class="footer_nav--btn">Home</a></li>
+                    <li><a href="about.html" class="footer_nav--btn">About Us</a ></li>
+                    <li><a href="subscribe.html" class="footer_nav--btn">Create Your Plan</a></li>
                 </ul>
-            </nav>
+            </div>
             <div class="footer_socials">
                 <img src="shared/desktop/icon-facebook.svg" alt="Link to Cofferoaster Facebook Page">
                 <img src="shared/desktop/icon-twitter.svg" alt="Link to Cofferoaster Twitter Page">
@@ -144,5 +147,9 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,10 @@
 $(document).ready(() => {
 
     //----------Functions-------------//
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
     $.fn.toggleAttr = function(attr, value1, value2) {
         return this.each(function() {
 
@@ -37,6 +41,97 @@ $(document).ready(() => {
         }
     }
 
+    const initialAnimation = () => {
+        const tl = gsap.timeline()
+        const header = $('header');
+        const hero = $('.hero');
+        const slideUps = $('.slide-up');
+
+        tl.to(hero, {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            ease: 'power2.inOut'
+        })
+
+        slideUps.each((index, slideUp) => {
+            tl.to(slideUp, {
+                duration: .5,
+                y: 0,
+                opacity: 1,
+                delay: 0.2 * index,
+                ease: 'power2.inOut'
+            })
+        })
+
+
+
+        tl.to(header, {
+            duration: 0.5,
+            opacity: 1,
+            y: 0,
+            ease: 'power2.inOut'
+        })
+    }
+
+    const scrollTriggers = () => {
+        const slideUpScrolls = document.querySelectorAll('.slide-up-scroll');
+        const tl = gsap.timeline();
+
+        slideUpScrolls.forEach((slide, i) => {
+            gsap.to(slide, {
+                opacity: 1,
+                y: 0,
+                ease: 'power2.inOut',
+                duration: .5,
+                scrub: 1,
+                scrollTrigger: {
+                    trigger: slide,
+                    start: 'top 80%',
+                    end: 'top 75%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        });
+    }
+
+    const scaleDown = () => {
+        const scales = document.querySelectorAll('.scale-down');
+
+        scales.forEach((scale, i) => {
+            gsap.to(scale, {
+                duration: 1,
+                opacity: 1,
+                scale: 1,
+                ease: 'power2.inOut',
+                scrollTrigger: {
+                    trigger: scale,
+                    start: 'top 95%',
+                    end: 'top 85%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        })
+    }
+
+    const widthAnimation = () => {
+        const width = document.querySelector('.width');
+
+        gsap.to(width, {
+            duration: 1,
+            opacity: 1,
+            width: '67%',
+            ease: 'power2.inOut',
+            scrollTrigger: {
+                trigger: width,
+                start: 'top 80%',
+                end: 'top 75%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+
+    }
+ 
 
 
 
@@ -71,7 +166,9 @@ $(document).ready(() => {
     })
 
     
-
-    
+    widthAnimation();
+    initialAnimation();
     navClassToggle();
+    scrollTriggers();
+    scaleDown();
 })

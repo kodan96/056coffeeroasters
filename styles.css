@@ -22,6 +22,7 @@ body {
     font-family: 'Barlow';
     text-align: center;
     counter-reset: section;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -89,6 +90,7 @@ header {
     justify-content: space-between;
     z-index: 999;
     position: relative;
+    
 }
 
 nav {
@@ -127,6 +129,7 @@ nav a {
     background-position: center;
     border-radius: 10px;
     margin-bottom: 7.5rem;
+    
 }
 
 .hero p {
@@ -288,6 +291,50 @@ footer ul li:not(:last-child) {
     margin-top: 3rem;
 }
 
+header .footer_nav--btn:hover {
+    color: var(--dark-grey-blue);
+    background-color: transparent;
+}
+
+.footer_nav--btn:hover {
+    color: var(--light-cream);
+    background-color: transparent;
+}
+
+a:hover {
+    background-color: #66D2CF;
+}
+
+.footer_socials img:hover {
+    cursor: pointer;
+    filter: brightness(.7);
+}
+
+.slide-up {
+    transform: translateY(50%);
+    opacity: 0;
+}
+
+.fade-in--initial {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.slide-up-scroll {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.scale-down {
+    transform: scale(1.2);
+}
+
+.width {
+    width: 0;
+    opacity: 0;
+}
+
+
 
 @media screen and (min-width: 680px) {
     
@@ -428,6 +475,7 @@ footer ul li:not(:last-child) {
     .process {
         text-align: left;
         margin-bottom: 9rem;
+        width: fit-content;
     }
 
     .process_container {
@@ -492,8 +540,139 @@ footer ul li:not(:last-child) {
     }
 
 
+}
 
+
+@media screen and (min-width: 1024px){
     
+    .container {
+        padding-inline: 5rem;
+    }
+
+    .logo {
+        margin-block: 2.7rem;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+        width: 10ch;
+    }
+
+    .hero {
+        padding: 7.3rem 5.3rem;
+        background-image: url(home/desktop/image-hero-coffeepress.jpg);
+    }
+
+    .hero p {
+        max-width: 45ch;
+        margin-bottom: 3.5rem;
+    }
+
+    .collections {
+        display: flex;
+
+        h2 {
+            font-size: 11rem;
+        }
+        margin-bottom: 12rem;
+    }
+
+    .collections_item {
+        flex-direction: column;
+    }
+
+    .collection_item--text {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .collection_item--text * {
+        text-align: center;
+        max-width: 28ch;
+    }
+
+    .collection_item--image{
+        padding-top: 5rem;
+
+        img {
+        width: 80%;
+        }
+    }
+
+    .reasons_header {
+        margin-bottom: -15rem;
+        padding-bottom: 20.3rem;
+
+        p {
+            width: 58ch;
+            margin-inline: auto;
+        }
+    }
+
+    .reasons_container {
+        display: flex;
+        gap: 2rem;
+        padding-inline: 5.3rem;
+    }
+
+    .reasons_item {
+        flex-direction: column;
+        text-align: center;
+        padding-block: 4.5rem 3rem;
+        padding-inline: 3rem;
+    }
+
+    .reasons_item--text {
+        text-align: center;
+    }
+
+    .process {
+        padding-inline: 5.3rem;
+        margin-bottom: 12.5rem;
+    }
+
+    .process h3::before {
+        margin-block: 5.3rem 2.5rem;
+    }
+
+    .process h3 {
+        font-size: 2rem;
+    }
+
+    .process p {
+        max-width: 40ch;
+    }
+
+    .process_section {
+        margin-bottom: 4rem;
+    }
+
+    .process:last-child .process_section {
+        margin-bottom: 4rem;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 5.3rem;
+    }
+
+    .footer_socials {
+        margin: 0;
+    }
+
+    footer .logo {
+        margin: 0;
+    }
+
+    .footer_flex {
+        display: flex;
+        gap: 6.3rem;
+        align-items: center;
+    }
+
+
 }
 
 

@@ -315,7 +315,7 @@ a:hover {
     filter: brightness(.7);
 }
 
-/*
+
 
 .slide-up {
     transform: translateY(50%);
@@ -347,7 +347,7 @@ a:hover {
     opacity: .8;
 }
 
-*/
+
 
 
 @media screen and (min-width: 680px) {

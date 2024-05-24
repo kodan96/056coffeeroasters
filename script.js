@@ -192,17 +192,17 @@ $(document).ready(() => {
         $(this).siblings('.input-wrap').removeClass('selected');
         $(this).toggleClass('selected');
 
-        // Find the next fieldset's hidden element and add the 'toggle' class
+       
         const toggled = $(this).closest('fieldset').next().find('.hidden');
         toggled.addClass('toggle');
 
-        // Find the first '.input-wrap' element
+        
         const capsule = $('.input-wrap').first();
         const selectedValues = $('.input-wrap.selected');
-        // Check if the parent fieldset's header is disabled
+        
         const parentFieldset = $(this).closest('fieldset').next();
         if (parentFieldset.find('.fieldset-header').hasClass('disabled')) {
-            // Slide down the hidden element with the 'toggle' class
+         
             parentFieldset.find('.hidden.toggle').removeClass('toggle');
             $('.hidden').last().addClass('toggle');
             $('.hidden.toggle').last().slideDown();
@@ -210,9 +210,9 @@ $(document).ready(() => {
             parentFieldset.find('.hidden.toggle').slideDown();
         }
 
-        // Check if the first '.input-wrap' element has the 'selected' class
+        
         if (capsule.hasClass('selected')) {
-            // Add 'disabled' class to '.fieldset-header' inside '#grind-type'
+            
             $('#grind-type').find('.fieldset-header').addClass('disabled');
             $('.no-capsule').hide();
             $('.capsule').show();

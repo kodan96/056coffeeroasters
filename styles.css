@@ -61,8 +61,11 @@ a {
     padding: 1rem 2rem;
     background-color: var(--dark-cyan);
     border-radius: 6px;
+    transition: all .3s ease-in;
 
 }
+
+
 
 ul {
     list-style: none;
@@ -312,6 +315,8 @@ a:hover {
     filter: brightness(.7);
 }
 
+/*
+
 .slide-up {
     transform: translateY(50%);
     opacity: 0;
@@ -342,6 +347,7 @@ a:hover {
     opacity: .8;
 }
 
+*/
 
 
 @media screen and (min-width: 680px) {
